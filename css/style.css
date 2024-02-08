@@ -644,7 +644,7 @@ body.menu-open #slide-out-area{
 }
 #slide-out-area .slide-out-area-content .bottom-meta-wrap a{
     font-size: 3rem;
-    color: var(--black);
+    color: color-mix(in oklab, var(--color-600), #000);
     transition: color .3s ease;
 }
 #slide-out-area .slide-out-area-content .bottom-meta-wrap a:is(:hover, :focus-visible){
