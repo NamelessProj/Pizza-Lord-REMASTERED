@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pizza Lord: Découvrez l'art de la pizza authentique. Des saveurs exquises, une ambiance chaleureuse et un service impeccable vous attendent.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Lord - Accueil</title>
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logo/logo-pizza-lord.ico">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="accueil">
+
+<div id="container">
+
+    <!-- ======== BTN SCROLL TO TOP ======== -->
+    <button type="button" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512" fill="currentColor">
+            <path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/>
+        </svg>
+    </button>
+
+    <!-- ======== NAVBAR ======== -->
+    <header id="mainMenu">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html">
+                        <img id="logo-nav-img-white" src="img/logo/logo-pizza-lord-light.png" alt="Logo Pizza Lord white" width="180px" height="80px" fetchpriority="high">
+                        <img id="logo-nav-img-black" src="img/logo/logo-pizza-lord.png" alt="Logo Pizza Lord" width="180px" height="80px" fetchpriority="high">
+                    </a>
+                </div>
+
+                <!-- ======== NAVBAR LINKS ======== -->
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a class="active" href="index.html" aria-current="page">Accueil</a></li>
+                            <li><a href="histoire.html">Notre histoire</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="reserver.html">Réserver une table</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+
+                        <!-- ======== BTN TOGGLE THE MENU ======== -->
+                        <button type="button" id="toggleMenuBtn" data-btn-toggle-menu>
+                            <span class="sr-only">Toggle the menu</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== CONTENT ======== -->
+    <div id="mainContent">
+
+        <!-- ======== HERO SECTION ======== -->
+        <div id="hero">
+            <p class="subtitle">Pizza Lord vous souhaite la bienvenue</p>
+
+            <h1>Pizza royale pour une famille royale</h1>
+
+            <a href="menu.html" class="btn-style">
+                <span>Voir le menu</span>
+                <svg xmlns="https://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" fill="currentColor">
+                    <path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/>
+                </svg>
+            </a>
+
+            <!-- ======== ARROW TO SCROLL ======== -->
+            <!-- Because screen readers doesn't need to scroll they don't need to know the existence of this element -->
+            <svg id="arrows-hero" width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-hidden="true">
+                <g id="triangles">
+                    <g id="lightGroup">
+                        <path id="light1" opacity="0.6" d="M46 48.268C47.3333 49.0378 47.3333 50.9623 46 51.7321L11.5 71.6506C10.1667 72.4204 8.5 71.4582 8.5 69.9186L8.5 30.0814C8.5 28.5418 10.1667 27.5796 11.5 28.3494L46 48.268Z"/>
+                    </g>
+                    <g id="darkGroup">
+                        <path id="dark2" opacity="0.8" d="M46 48.268C47.3333 49.0378 47.3333 50.9623 46 51.7321L11.5 71.6506C10.1667 72.4204 8.5 71.4582 8.5 69.9186L8.5 30.0814C8.5 28.5418 10.1667 27.5796 11.5 28.3494L46 48.268Z"/>
+                        <path id="dark1" opacity="0.8" d="M57 48.2679C58.3333 49.0377 58.3333 50.9622 57 51.732L22.5 71.6506C21.1667 72.4204 19.5 71.4581 19.5 69.9185L19.5 30.0814C19.5 28.5417 21.1667 27.5795 22.5 28.3493L57 48.2679Z"/>
+                    </g>
+                </g>
+            </svg>
+
+            <!-- ======== HEADER BG IMG ======== -->
+            <picture class="bg-img">
+                <source srcset="img/HERO/header_img.webp" type="image/webp">
+                <img src="img/HERO/header_img.jpg" alt="Pizza" fetchpriority="high">
+            </picture>
+        </div>
+
+        <!-- ======== MAIN CONTENT ======== -->
+        <main>
+
+            <!-- ======== ABOUT US ======== -->
+            <section id="quiSommesNous">
+                <picture>
+                    <source srcset="img/pizza_01.webp" type="image/webp">
+                    <img src="img/pizza_01.jpg" alt="A really good pizza" loading="lazy">
+                </picture>
+                <div>
+                    <h2>Qui sommes-nous ?</h2>
+
+                    <div>
+                        <p>
+                            <span class="pizza-lord">Pizza Lord</span> est bien plus qu'une simple pizzeria. C'est une histoire familiale ancrée dans la
+                            tradition royale de la gastronomie. Depuis des générations, notre établissement perpétue l'art
+                            de préparer des pizzas délicieuses, transmettant des recettes secrètes qui ont régalé rois et
+                            reines. Notre pizzeria offre une ambiance chaleureuse et conviviale, où chaque client est
+                            accueilli comme un membre de la famille royale.
+                        </p>
+
+                        <p class="sm-hide">
+                            Nous combinons l'héritage royal de notre cuisine avec une touche de modernité pour offrir une
+                            expérience inoubliable à tous nos convives. Rejoignez-nous chez <span class="pizza-lord">Pizza Lord</span> pour goûter à
+                            la magie de notre cuisine familiale, royale et moderne, et laissez-vous emporter par la
+                            délicatesse de nos saveurs et l'ambiance festive qui règne dans notre royaume de la
+                            gastronomie.
+                        </p>
+                    </div>
+
+                    <a href="histoire.html" class="btn-style">
+                        <span>
+                            Notre histoire vous intérsse ?
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="8" viewBox="0 0 256 512" fill="currentColor">
+                            <path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ======== GALLERY ======== -->
+            <section id="miniGalerie">
+                <picture id="galPic0">
+                    <source srcset="img/restaurant-porte.webp" type="image/webp">
+                    <img src="img/restaurant-porte.jpg" alt="Entrée du restaurant avec une porte, une chaise et une table" loading="lazy">
+                </picture>
+                <picture id="galPic1">
+                    <source srcset="img/pizza_au_four.webp" type="image/webp">
+                    <img src="img/pizza_au_four.jpg" alt="Une pizza dans un four au feu de bois avec une autre pizza qui refroidit" loading="lazy">
+                </picture>
+                <picture id="galPic2">
+                    <source srcset="img/cuisine.webp" type="image/webp">
+                    <img src="img/cuisine.jpg" alt="Une cuisine avec un cuisinier" loading="lazy">
+                </picture>
+                <picture id="galPic3">
+                    <source srcset="img/table.webp" type="image/webp">
+                    <img src="img/table.jpg" alt="Intérieure du restaurant avec des tables et des chaises" loading="lazy">
+                </picture>
+            </section>
+        </main>
+    </div>
+
+    <!-- ======== FOOTER ========= -->
+    <footer>
+
+        <!-- ======== RESERVATION ======== -->
+        <section id="reserverTable">
+            <p class="subtitle">Réserver en ligne</p>
+            <h2>Réserver une table</h2>
+            <a class="btn-style" href="reserver.html">Réserver maintenant</a>
+            <picture class="bg-img">
+                <source srcset="img/table.webp" type="image/webp">
+                <img src="img/table.jpg" alt="Une table avec des chaise" loading="lazy">
+            </picture>
+        </section>
+
+        <section id="footerSection">
+
+            <!-- ======== FOOTER DESCRIPTION ======== -->
+            <div id="footerPresentation">
+                <a href="index.html">
+                    <h2>Pizza Lord</h2>
+                </a>
+                <p>
+                    Nous perpétuons l'art de la pizza depuis des générations, mêlant tradition royale et modernité. Dans une ambiance chaleureuse, chaque client est accueilli comme un membre de la famille, invité à savourer des recettes secrètes qui ont régalé rois et reines.
+                </p>
+            </div>
+
+            <!-- ======== OPENING TIME ======== -->
+            <div id="heureOuverture">
+                <h4>Heure d'ouverture</h4>
+                <div>
+                    <p>Lundi - Samedi</p>
+                    <p>10:00 - 23:00</p>
+                    <p>Dimanche</p>
+                    <p>11:00 - 00:00</p>
+                </div>
+            </div>
+
+            <!-- ======== CONTACT ======== -->
+            <div id="adresseContact">
+                <h4>Adresse de contact</h4>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512" fill="currentColor">
+                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                </svg>
+                            </p>
+                            <div>
+                                <p>Pizza Lord</p>
+                                <p>En Chamard 35</p>
+                                <p>1442 Montagny-près-Yverdon</p>
+                                <p>Suisse</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+41240000000">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                                </svg>
+                            </p>
+                            <p>+41 24 000 00 00</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pizzalord.contact@gmail.com">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                </svg>
+                            </p>
+                            <p>pizzalord.contact@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ======== FOOTER SOCIAL ======== -->
+        <section id="footerRS">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <span class="sr-only">Instagram</span>
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                        <span class="sr-only">LinkedIn</span>
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+    <!-- ======== COPYRIGHT ======== -->
+    <div id="copyright">
+        <hr>
+        <p>
+            &#169; <span data-current-year></span> &#124; <a href="https://github.com/NamelessProj" target="_blank">Da Silva Pinto Kevin</a>
+        </p>
+    </div>
+</div>
+
+<!-- ======== SLIDE MENU ======== -->
+<div id="slide-out-area">
+
+    <!-- ======== BTN CLOSE MENU ======== -->
+    <button type="button" id="slide-out-area-close" data-btn-toggle-menu>
+            <span class="close-wrap">
+                <span></span>
+                <span></span>
+            </span>
+    </button>
+
+    <!-- ======== MENU CONTENT ======== -->
+    <div class="slide-out-area-content">
+        <div class="inner-wrap">
+            <nav class="inner">
+
+                <!-- ======== MENU LINKS ======== -->
+                <ul class="menu-mobile">
+                    <li class="menu-item"><a class="active" href="index.html" aria-current="page">Accueil</a></li>
+                    <li class="menu-item"><a href="menu.html">Menu</a></li>
+                    <li class="menu-item"><a href="histoire.html">Notre histoire</a></li>
+                    <li class="menu-item"><a href="reserver.html">Réserver</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- ======== MENU LOCALISATION ======== -->
+                <div class="contact-infos">
+                    <h4>Contact</h4>
+                    <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                        <p>Pizza Lord</p>
+                        <p>En Chamard 35</p>
+                        <p>1442 Montagny-près-Yverdon</p>
+                        <p>Suisse</p>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- ======== RS LINKS ======== -->
+            <div class="bottom-meta-wrap">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <span class="sr-only">Instagram</span>
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

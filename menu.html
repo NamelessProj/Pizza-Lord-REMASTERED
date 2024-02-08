@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pizza Lord: Découvrez l'art de la pizza authentique. Des saveurs exquises, une ambiance chaleureuse et un service impeccable vous attendent.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Lord - Menu</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logo/logo-pizza-lord.ico">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="menu">
+
+<div id="container">
+
+    <!-- ======== BTN SCROLL TO TOP ======== -->
+    <button type="button" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512" fill="currentColor">
+            <path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/>
+        </svg>
+    </button>
+
+    <!-- ======== NAVBAR ======== -->
+    <header id="mainMenu">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html">
+                        <img id="logo-nav-img-white" src="img/logo/logo-pizza-lord-light.png" alt="Logo Pizza Lord white" width="180px" height="80px" fetchpriority="high">
+                        <img id="logo-nav-img-black" src="img/logo/logo-pizza-lord.png" alt="Logo Pizza Lord" width="180px" height="80px" fetchpriority="high">
+                    </a>
+                </div>
+
+                <!-- ======== NAVBAR LINKS ======== -->
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="histoire.html">Notre histoire</a></li>
+                            <li><a class="active" href="menu.html" aria-current="page">Menu</a></li>
+                            <li><a href="reserver.html">Réserver une table</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+
+                        <!-- ======== BTN TOGGLE THE MENU ======== -->
+                        <button type="button" id="toggleMenuBtn" data-btn-toggle-menu>
+                            <span class="sr-only">Toggle the menu</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== CONTENT ======== -->
+    <div id="mainContent">
+
+        <!-- ======== HERO SECTION ======== -->
+        <div id="hero">
+            <p class="subtitle">Consultez nos pizzas</p>
+            <h1>Notre carte</h1>
+
+            <!-- ======== HEADER BG IMG ======== -->
+            <picture class="bg-img">
+                <source srcset="img/HERO/menu.webp" type="image/webp">
+                <img src="img/HERO/menu.jpg" alt="Un tableau noir à l'extérieur servant de menu" fetchpriority="high">
+            </picture>
+        </div>
+
+        <!-- ======== MAIN CONTENT ======== -->
+        <main>
+
+            <!-- ======== MENU ======== -->
+            <section id="menu">
+
+                <!-- ======== FILTERS ======== -->
+                <div class="filter">
+                    <h2 class="sr-only">Filtre des pizzas</h2>
+                    <button type="button" class="filter-btn active" data-filter="all">Tout</button>
+                    <button type="button" class="filter-btn" data-filter="vegetarien">Végétarien</button>
+                    <button type="button" class="filter-btn" data-filter="porc">Porc</button>
+                    <button type="button" class="filter-btn" data-filter="poisson">Poisson</button>
+                </div>
+
+                <!-- ======== MENU / PIZZA LIST ======== -->
+                <ul class="pizza-list">
+
+                    <!-- Every pizza is a "li" -->
+
+                    <li class="pizza-item" data-category-vegetarien>
+                        <div class="pizza-details">
+                            <span>Végétarien</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Margherita</h2>
+                            <p>15.80</p>
+                            <p>17.80</p>
+                            <p>Sauce tomate, mozzarella, basilic</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-porc>
+                        <div class="pizza-details">
+                            <span>Porc</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Prosciutto</h2>
+                            <p>16.80</p>
+                            <p>18.80</p>
+                            <p>Sauce tomate, mozzarella, jambon, basilic</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-porc>
+                        <div class="pizza-details">
+                            <span>Porc</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Prosciutto Funghi</h2>
+                            <p>17.80</p>
+                            <p>19.80</p>
+                            <p>Sauce tomate, mozzarella, jambon, champignons, basilic</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-poisson>
+                        <div class="pizza-details">
+                            <span>Poisson</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Napoli</h2>
+                            <p>18.80</p>
+                            <p>20.80</p>
+                            <p>Sauce tomate, mozzarella, olives, anchois, câpres</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-vegetarien>
+                        <div class="pizza-details">
+                            <span>Végétarien</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Vegetariana</h2>
+                            <p>20.80</p>
+                            <p>22.80</p>
+                            <p>Sauce tomate, mozzarella, légumes du jour, basilic</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-poisson>
+                        <div class="pizza-details">
+                            <span>Poisson</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Salmone</h2>
+                            <p>22.80</p>
+                            <p>24.80</p>
+                            <p>Sauce tomate, mozzarella, saumon, roquette, oignons</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-porc>
+                        <div class="pizza-details">
+                            <span>Porc</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Hawai</h2>
+                            <p>17.80</p>
+                            <p>19.80</p>
+                            <p>Sauce tomate, mozzarella, jambon, ananas</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-vegetarien>
+                        <div class="pizza-details">
+                            <span>Végétarien</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>4 fromaggi</h2>
+                            <p>20.80</p>
+                            <p>22.80</p>
+                            <p>Sauce tomate, mozzarella, gorgonzola, gruyère, vacherin</p>
+                        </div>
+                    </li>
+
+                    <li class="pizza-item" data-category-porc>
+                        <div class="pizza-details">
+                            <span>Porc</span>
+                        </div>
+                        <div class="pizza-infos">
+                            <h2>Calzone</h2>
+                            <p>19.80</p>
+                            <p>21.80</p>
+                            <p>Sauce tomate, mozzarella, jambon, champignons, origan</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- ======== PRICES INFOS ======== -->
+                <div class="infos-bottom">
+                    <p><span>*: </span>Prix des petites pizzas</p>
+                    <p><span>**: </span>Prix des grandes pizzas</p>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- ======== FOOTER ========= -->
+    <footer>
+
+        <!-- ======== RESERVATION ======== -->
+        <section id="reserverTable">
+            <p class="subtitle">Réserver en ligne</p>
+            <h2>Réserver une table</h2>
+            <a class="btn-style" href="reserver.html">Réserver maintenant</a>
+            <picture class="bg-img">
+                <source srcset="img/table.webp" type="image/webp">
+                <img src="img/table.jpg" alt="Une table avec des chaise">
+            </picture>
+        </section>
+
+        <section id="footerSection">
+
+            <!-- ======== FOOTER DESCRIPTION ======== -->
+            <div id="footerPresentation">
+                <a href="index.html">
+                    <h2>Pizza Lord</h2>
+                </a>
+                <p>
+                    Nous perpétuons l'art de la pizza depuis des générations, mêlant tradition royale et modernité. Dans une ambiance chaleureuse, chaque client est accueilli comme un membre de la famille, invité à savourer des recettes secrètes qui ont régalé rois et reines.
+                </p>
+            </div>
+
+            <!-- ======== OPENING TIME ======== -->
+            <div id="heureOuverture">
+                <h4>Heure d'ouverture</h4>
+                <div>
+                    <p>Lundi - Samedi</p>
+                    <p>10:00 - 23:00</p>
+                    <p>Dimanche</p>
+                    <p>11:00 - 00:00</p>
+                </div>
+            </div>
+
+            <!-- ======== CONTACT ======== -->
+            <div id="adresseContact">
+                <h4>Adresse de contact</h4>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512" fill="currentColor">
+                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                </svg>
+                            </p>
+                            <div>
+                                <p>Pizza Lord</p>
+                                <p>En Chamard 35</p>
+                                <p>1442 Montagny-près-Yverdon</p>
+                                <p>Suisse</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+41240000000">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                                </svg>
+                            </p>
+                            <p>+41 24 000 00 00</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pizzalord.contact@gmail.com">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                </svg>
+                            </p>
+                            <p>pizzalord.contact@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ======== FOOTER SOCIAL ======== -->
+        <section id="footerRS">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <span class="sr-only">Instagram</span>
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                        <span class="sr-only">LinkedIn</span>
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+    <!-- ======== COPYRIGHT ======== -->
+    <div id="copyright">
+        <hr>
+        <p>
+            &#169; <span data-current-year></span> &#124; <a href="https://github.com/NamelessProj" target="_blank">Da Silva Pinto Kevin</a>
+        </p>
+    </div>
+</div>
+
+<!-- ======== SLIDE MENU ======== -->
+<div id="slide-out-area">
+
+    <!-- ======== BTN CLOSE MENU ======== -->
+    <button type="button" id="slide-out-area-close" data-btn-toggle-menu>
+            <span class="close-wrap">
+                <span></span>
+                <span></span>
+            </span>
+    </button>
+
+    <!-- ======== MENU CONTENT ======== -->
+    <div class="slide-out-area-content">
+        <div class="inner-wrap">
+            <nav class="inner">
+
+                <!-- ======== MENU LINKS ======== -->
+                <ul class="menu-mobile">
+                    <li class="menu-item"><a href="index.html">Accueil</a></li>
+                    <li class="menu-item"><a class="active" href="menu.html" aria-current="page">Menu</a></li>
+                    <li class="menu-item"><a href="histoire.html">Notre histoire</a></li>
+                    <li class="menu-item"><a href="reserver.html">Réserver</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- ======== MENU LOCALISATION ======== -->
+                <div class="contact-infos">
+                    <h4>Contact</h4>
+                    <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                        <p>Pizza Lord</p>
+                        <p>En Chamard 35</p>
+                        <p>1442 Montagny-près-Yverdon</p>
+                        <p>Suisse</p>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- ======== RS LINKS ======== -->
+            <div class="bottom-meta-wrap">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <span class="sr-only">Instagram</span>
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

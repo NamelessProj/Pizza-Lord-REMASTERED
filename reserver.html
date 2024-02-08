@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pizza Lord: Découvrez l'art de la pizza authentique. Des saveurs exquises, une ambiance chaleureuse et un service impeccable vous attendent.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Lord - Réserver une table</title>
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logo/logo-pizza-lord.ico">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="reserver">
+
+<div id="container">
+
+    <!-- ======== BTN SCROLL TO TOP ======== -->
+    <button type="button" id="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512" fill="currentColor">
+            <path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/>
+        </svg>
+    </button>
+
+    <!-- ======== NAVBAR ======== -->
+    <header id="mainMenu">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html">
+                        <img id="logo-nav-img-white" src="img/logo/logo-pizza-lord-light.png" alt="Logo Pizza Lord white" width="180px" height="80px" fetchpriority="high">
+                        <img id="logo-nav-img-black" src="img/logo/logo-pizza-lord.png" alt="Logo Pizza Lord" width="180px" height="80px" fetchpriority="high">
+                    </a>
+                </div>
+
+                <!-- ======== NAVBAR LINKS ======== -->
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="histoire.html">Notre histoire</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a class="active" href="reserver.html" aria-current="page">Réserver une table</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+
+                        <!-- ======== BTN TOGGLE THE MENU ======== -->
+                        <button type="button" id="toggleMenuBtn" data-btn-toggle-menu>
+                            <span class="sr-only">Toggle the menu</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== CONTENT ======== -->
+    <div id="mainContent">
+
+        <!-- ======== HERO SECTION ======== -->
+        <div id="hero">
+            <p class="subtitle">Réservez votre table dès maintenant</p>
+            <h1>Réserver en ligne</h1>
+
+            <!-- ======== HEADER BG IMG ======== -->
+            <picture class="bg-img">
+                <source srcset="img/HERO/table.webp" type="image/webp">
+                <img src="img/HERO/table.jpg" alt="Une table avec un journal, un café et un stylo" fetchpriority="high">
+            </picture>
+        </div>
+
+        <!-- ======== MAIN CONTENT ======== -->
+        <main>
+
+            <!-- ======== RESERVATION ======== -->
+            <section id="reserver">
+                <div>
+                    <form action="" method="post">
+                        <div class="user-box">
+                            <input type="text" name="name" id="name" oninput="this.value = this.value.replace(/[^a-z A-Z-]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            <label>Prénom</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="lastname" id="lastname" oninput="this.value = this.value.replace(/[^a-z A-Z-]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            <label>Nom</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="email" name="email" id="email" inputmode="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="tel" name="tel" id="tel" inputmode="tel" pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            <label>Tel</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="numPers" id="numPers" inputmode="numeric" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            <label>Nombre de personnes</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="date" name="date" id="date" required>
+                            <label>Date de réservation</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="time" name="time" id="time" min="11:00" max="21:00" required>
+                            <label>Heure de réservation</label>
+                        </div>
+                        <textarea name="msg" id="msg" placeholder="Laissez nous en savoir plus..." rows="4"></textarea>
+
+                        <!-- ======== SEND BTN ======== -->
+                        <button type="submit" id="sendBtn">
+                            <span>Réserver</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ======== FOOTER ========= -->
+    <footer>
+
+        <!-- ======== RESERVATION ======== -->
+        <section id="reserverTable">
+            <p class="subtitle">Réserver en ligne</p>
+            <h2>Réserver une table</h2>
+            <a class="btn-style" href="#">Réserver maintenant</a>
+            <picture class="bg-img">
+                <source srcset="img/table.webp" type="image/webp">
+                <img src="img/table.jpg" alt="Une table avec des chaise">
+            </picture>
+        </section>
+
+        <section id="footerSection">
+
+            <!-- ======== FOOTER DESCRIPTION ======== -->
+            <div id="footerPresentation">
+                <a href="index.html">
+                    <h2>Pizza Lord</h2>
+                </a>
+                <p>
+                    Nous perpétuons l'art de la pizza depuis des générations, mêlant tradition royale et modernité. Dans une ambiance chaleureuse, chaque client est accueilli comme un membre de la famille, invité à savourer des recettes secrètes qui ont régalé rois et reines.
+                </p>
+            </div>
+
+            <!-- ======== OPENING TIME ======== -->
+            <div id="heureOuverture">
+                <h4>Heure d'ouverture</h4>
+                <div>
+                    <p>Lundi - Samedi</p>
+                    <p>10:00 - 23:00</p>
+                    <p>Dimanche</p>
+                    <p>11:00 - 00:00</p>
+                </div>
+            </div>
+
+            <!-- ======== CONTACT ======== -->
+            <div id="adresseContact">
+                <h4>Adresse de contact</h4>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512" fill="currentColor">
+                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                </svg>
+                            </p>
+                            <div>
+                                <p>Pizza Lord</p>
+                                <p>En Chamard 35</p>
+                                <p>1442 Montagny-près-Yverdon</p>
+                                <p>Suisse</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+41240000000">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                                </svg>
+                            </p>
+                            <p>+41 24 000 00 00</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pizzalord.contact@gmail.com">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                </svg>
+                            </p>
+                            <p>pizzalord.contact@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ======== FOOTER SOCIAL ======== -->
+        <section id="footerRS">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <span class="sr-only">Instagram</span>
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                        <span class="sr-only">LinkedIn</span>
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+    <!-- ======== COPYRIGHT ======== -->
+    <div id="copyright">
+        <hr>
+        <p>
+            &#169; <span data-current-year></span> &#124; <a href="https://github.com/NamelessProj" target="_blank">Da Silva Pinto Kevin</a>
+        </p>
+    </div>
+</div>
+
+<!-- ======== SLIDE MENU ======== -->
+<div id="slide-out-area">
+
+    <!-- ======== BTN CLOSE MENU ======== -->
+    <button type="button" id="slide-out-area-close" data-btn-toggle-menu>
+            <span class="close-wrap">
+                <span></span>
+                <span></span>
+            </span>
+    </button>
+
+    <!-- ======== MENU CONTENT ======== -->
+    <div class="slide-out-area-content">
+        <div class="inner-wrap">
+            <nav class="inner">
+
+                <!-- ======== MENU LINKS ======== -->
+                <ul class="menu-mobile">
+                    <li class="menu-item"><a href="index.html">Accueil</a></li>
+                    <li class="menu-item"><a href="menu.html">Menu</a></li>
+                    <li class="menu-item"><a href="histoire.html">Notre histoire</a></li>
+                    <li class="menu-item"><a class="active" href="reserver.html" aria-current="page">Réserver</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- ======== MENU LOCALISATION ======== -->
+                <div class="contact-infos">
+                    <h4>Contact</h4>
+                    <a href="https://maps.app.goo.gl/jNASyRrncdCJdbnf7" target="_blank">
+                        <p>Pizza Lord</p>
+                        <p>En Chamard 35</p>
+                        <p>1442 Montagny-près-Yverdon</p>
+                        <p>Suisse</p>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- ======== RS LINKS ======== -->
+            <div class="bottom-meta-wrap">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <span class="sr-only">Instagram</span>
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
