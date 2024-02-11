@@ -180,7 +180,3 @@ if(document.getElementById('arrows-hero')){
         document.querySelector('#mainContent main').scrollIntoView();
     });
 }
-
-
-
-console.log('no errors'); // TODO: ERASE THIS LINE AT THE END OF THE PROJECT
