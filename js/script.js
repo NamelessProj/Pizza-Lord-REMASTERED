@@ -3,14 +3,19 @@ document.querySelector('[data-current-year]').innerText = new Date().getFullYear
 
 
 
-// ======== BTN SCROLL TO TOP ========
+// CHECK IF USER PREFER REDUCED-MOTION
+let scrollBehavior = 'smooth';
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) scrollBehavior = 'instant';
 
+
+
+// ======== BTN SCROLL TO TOP ========
 const btnScrollToTop = document.getElementById('scrollToTop');
 btnScrollToTop.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth'
+        behavior: scrollBehavior
     });
 });
 
@@ -34,7 +39,7 @@ if(document.querySelector('.filter')){
         btn.addEventListener('click', (e) => {
             const filter = e.target.getAttribute('data-filter');
 
-            if(!document.startViewTransition){
+            if(!document.startViewTransition || scrollBehavior !== 'smooth'){
                 updateActiveButton(e.target);
                 filterPizza(filter);
             }
