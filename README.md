@@ -1,6 +1,6 @@
-# Pizza Lord
-
 This project is in French!
+
+# Pizza Lord
 
 ## Goals
 
