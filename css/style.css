@@ -984,7 +984,7 @@ body:is([data-page="contact"], [data-page="reserver"]) form .user-box:has(#email
 body[data-page="reserver"] #hero img{
     object-position: center;
 }
-/* TODO: ERASE THE #reserverTable ON PAGE reserver.html */
+
 body[data-page="reserver"] #reserverTable{
     display: none;
 }
