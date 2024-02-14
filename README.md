@@ -1,5 +1,7 @@
 This project is in French!
 
+[Live website](https://pizza-lord.vercel.app/)
+
 # Pizza Lord
 
 ## Goals
